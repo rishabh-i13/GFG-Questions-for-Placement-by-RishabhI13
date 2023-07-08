@@ -25,12 +25,7 @@ class Solution
             }
             st.push(arr[i]);
         }
-        
-        // vector<long long > answer;
-        // for(int i=0;i<n;i++){
-        //     answer.push_back(mp[arr[i]]);
-        // }
-        // return answer;
+
         return vc;
     }
 };
