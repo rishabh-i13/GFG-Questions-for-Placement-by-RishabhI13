@@ -107,9 +107,7 @@ class Solution {
             Node* x=t.first;
             int y=t.second;
             q.pop();
-            // if(mp.find(y)==mp.end()){
             mp[y]=x->data;
-            // }
             if(x->left) q.push({x->left,y-1});
             if(x->right) q.push({x->right,y+1});
         }
