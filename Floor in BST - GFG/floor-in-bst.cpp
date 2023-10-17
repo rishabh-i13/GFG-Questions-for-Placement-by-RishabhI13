@@ -21,21 +21,26 @@ struct Node {
 class Solution{
 
 public:
-    void working(Node* node, int &maxi,int x){
-        if(node==NULL) return;
-        
-        if(node->data<=x and node->data>maxi){
-            maxi=node->data;
-        }
-        
-        working(node->left,maxi,x);
-        working(node->right,maxi,x);
-    }
+
     int floor(Node* root, int x) {
         // Code here
-        int maxi=-1;
-        working(root,maxi,x);
-        return maxi;
+        int floorval=-1;
+        
+        while(root){
+            if(root->data==x){
+                floorval=x;
+                return floorval;
+            }
+            if(root->data<x){
+                floorval=root->data;
+                root=root->right;
+            }
+            else {
+                root=root->left;
+            }
+        }
+        return floorval;
+
     }
 };
 
