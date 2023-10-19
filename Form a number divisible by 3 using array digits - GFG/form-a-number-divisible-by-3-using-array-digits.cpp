@@ -13,9 +13,13 @@ class Solution {
         // code here
         int ct=0;
         for(int i=0;i<N;i++){
-            int k=log10(arr[i])+1;
+            // int k=log10(arr[i])+1;
             int m=arr[i];
-            for(int j=0;j<k;j++){
+            // for(int j=0;j<k;j++){
+            //     ct+=m%10;
+            //     m=m/10;
+            // }
+            while(m){
                 ct+=m%10;
                 m=m/10;
             }
